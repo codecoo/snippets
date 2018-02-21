@@ -1,0 +1,8 @@
+//ASP.NET Identity - Get Claims when user logs in
+[Authorize]
+public ActionResult SomeAction()
+{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    ...
+}
